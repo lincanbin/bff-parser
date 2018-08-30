@@ -1,0 +1,39 @@
+{
+  "name": "bff-parser",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "eslint": "^5.2.0",
+    "eslint-config-standard": "^12.0.0-alpha.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.0.1",
+    "should": "^13.2.3"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lincanbin/bff-parser.git"
+  },
+  "keywords": [
+    "bff"
+  ],
+  "author": "lincanbin <lincanbin@hotmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/lincanbin/bff-parser/issues"
+  },
+  "homepage": "https://github.com/lincanbin/bff-parser#readme"
+}
