@@ -21,14 +21,17 @@
     "should": "^13.2.3"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "node --experimental-modules ./test/run.mjs"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lincanbin/bff-parser.git"
   },
   "keywords": [
-    "bff"
+    "bff",
+    "gateway",
+    "proxy",
+    "http proxy"
   ],
   "author": "lincanbin <lincanbin@hotmail.com>",
   "license": "Apache-2.0",
