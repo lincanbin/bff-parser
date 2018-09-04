@@ -1,0 +1,37 @@
+[
+  [{
+    "attributes": [
+      "data.id",
+      "data.nick_name",
+      [
+        {
+          "url": "/comments/query",
+          "attributes": [
+            "data[].id",
+            "data[].content",
+            [
+              {
+                "url": "/comments/picture",
+                "attributes": [
+                  "data[].id",
+                  "data[].content"
+                ],
+                "data": {
+                  "comment_id": "$.bff.bind(`data[].id`)"
+                }
+              }, "data[].pictures"
+            ]
+          ],
+          "data": {
+            "user_id": "$.bff.bind(`parent`, `id`)"
+          }
+        }, "alias"
+      ]
+    ],
+    "url": "/user_info/pc_info",
+    "method": "GET",
+    "data": {
+      "uid": 123
+    }
+  }, "user_info"]
+]
