@@ -5,16 +5,15 @@
       "data.nick_name",
       [
         {
-          "url": "/comments/query",
+          "url": "/comment/query",
           "attributes": [
             "data[].id",
             "data[].content",
             [
               {
-                "url": "/comments/picture",
+                "url": "/comment/picture",
                 "attributes": [
-                  "data[].id",
-                  "data[].content"
+                  "data[]"
                 ],
                 "data": {
                   "comment_id": "$.bff.bind(`data[].id`)"
