@@ -36,7 +36,7 @@ const testFunc = async () => {
   let bffInstance = new BffParser(body, requestProcessor)
   await bffInstance.execute()
   console.log(bffInstance)
-  console.log('Result', bffInstance.result.getResult())
+  console.log('Result', JSON.stringify(bffInstance.result.getResult(), null, '\t'))
 
   const ms = Date.now() - start
   console.log(`${ms}ms`)
