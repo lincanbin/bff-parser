@@ -35,11 +35,16 @@ const start = Date.now()
 const testFunc = async () => {
   let bffInstance = new BffParser(body, requestProcessor)
   await bffInstance.execute()
-  console.log(bffInstance)
-  console.log('Result', JSON.stringify(bffInstance.result.getResult(), null, '\t'))
+  // console.log(bffInstance)
+  console.log('Request count: ', bffInstance.requestCount)
+  console.log('Result', JSON.stringify(bffInstance.getResult(), null, '\t'))
 
   const ms = Date.now() - start
   console.log(`${ms}ms`)
+  const used = process.memoryUsage()
+  for (let key in used) {
+    console.log(`${key} ${Math.round(used[key] / 1024 / 1024 * 100) / 100} MB`)
+  }
 }
 
 testFunc()
