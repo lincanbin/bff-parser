@@ -1,36 +1,65 @@
 [
-  [{
-    "attributes": [
-      "data.id",
-      "data.nick_name",
-      [
-        {
-          "url": "/comment/query",
-          "attributes": [
-            "data[].id",
-            "data[].content",
-            [
-              {
-                "url": "/comment/picture",
-                "attributes": [
-                  "data[]"
-                ],
-                "data": {
-                  "comment_id": "$.bff.bind(`data[].id`)"
-                }
-              }, "data[].pictures"
-            ]
-          ],
-          "data": {
-            "user_id": "$.bff.bind(`parent`, `id`)"
-          }
-        }, "alias"
-      ]
-    ],
-    "url": "/user_info/pc_info",
-    "method": "GET",
-    "data": {
-      "uid": 123
-    }
-  }, "user_info"]
+  [
+    {
+      "attributes": [
+        [
+          {
+            "url": "/comment/query",
+            "attributes": [
+              "data[].id",
+              "data[].content",
+              [
+                {
+                  "url": "/comment/picture",
+                  "attributes": [
+                    "data[]"
+                  ],
+                  "data": {
+                    "comment_id": "$.bff.bind(`data[].id`)"
+                  }
+                },
+                "data[].pictures"
+              ]
+            ],
+            "data": {
+              "user_id": "$.bff.bind(`parent`, `id`)"
+            }
+          },
+          "alias"
+        ],
+        [
+          "alias.data",
+          "alias"
+        ],
+        [
+          "data.id",
+          "id"
+        ],
+        [
+          "data.nick_name",
+          "nick_name"
+        ]
+      ],
+      "url": "/user_info/pc_info",
+      "method": "GET",
+      "data": {
+        "uid": 123
+      }
+    },
+    "user_info"
+  ],
+  [
+    {
+      "attributes": [
+        "data.id",
+        "data.nick_name"
+      ],
+      "url": "/user_info/pc_info",
+      "method": "GET",
+      "data": {
+        "uid": 321
+      }
+    },
+    "user_info2"
+  ]
 ]
