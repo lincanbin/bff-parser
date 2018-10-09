@@ -12,8 +12,9 @@ let body = JSON.parse(fs.readFileSync(path.join(fs.realpathSync('.'), './resourc
 }))
 
 // console.log(body)
-const requestProcessor = (request) => {
+const requestProcessor = (request, levelName) => {
   // console.log('Process new request: ', request)
+  console.log('Process new request: ', levelName)
   return (new Promise((resolve, reject) => {
     fs.readFile(
       path.join(fs.realpathSync('.'), './mock' + request.url + '.json'),
